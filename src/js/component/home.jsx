@@ -1,25 +1,19 @@
 import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Card from "./Card.jsx";
+import NavBar from "./NavBar.jsx";
+import CardTitle from "./CardTitle.jsx";
 
 //create your first component
 const Home = () => {
+	const imageUrl = "https://www.wallpaperflare.com/static/824/125/246/honda-logo-wallpaper.jpg"
+
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div>
+			<NavBar brandName="Start Bootstrap" pageName="Home" lastName="About me" serviceName="Services" contactName="Contact" />
+			<CardTitle title="A Warm WELCOME!" content="A warm welcome to this web profile about the prestigious Honda brand. Here we will discuss everything about its projection over the decades and what it brings in the future." button="Call To Action!" />
+			<Card image={imageUrl} title="Honda" content="Blue Skies for Our Children" button="Find Out More!" />
 		</div>
+
 	);
 };
 
